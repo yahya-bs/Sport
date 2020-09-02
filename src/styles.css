@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+.up{
+    margin-top: 30px;
+}
+.center{
+    text-align: center;
+}
+
+.rouge{
+    color: red;
+}
+
+.space{
+    margin-top: 150px;
+}

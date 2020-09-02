@@ -1,0 +1,35 @@
+<div class="d-flex team-vs" style="margin-bottom: 150px;">
+  <span class="score"> <span
+      [ngClass]="{'vert': compare(data.scoreOne,data.scoreTwo)=='WIN', 'rouge': compare(data.scoreOne,data.scoreTwo)=='LOSES', 'bleu':compare(data.scoreOne,data.scoreTwo)=='DRAW'}">{{data.scoreOne}}</span>
+    - <span
+      [ngClass]="{'vert': compare(data.scoreTwo,data.scoreOne)=='WIN', 'rouge': compare(data.scoreTwo,data.scoreOne)=='LOSES', 'bleu':compare(data.scoreTwo,data.scoreOne)=='DRAW'}">{{data.scoreTwo}}</span>
+    <div class="form-group">
+      <button type="submit" class="btn btn-success" (click)='goToMatch(data.id)'>Display Match</button> <br>
+      <button type="submit" class="btn btn-danger" (click)='deleteMatch(data.id)'>Delete Match</button>
+    </div>
+  </span>
+  <div class="team-1 w-50">
+    <div class="team-details w-100 text-center">
+      <img src="assets/images/logo_1.png" alt="Image" class="img-fluid">
+      <h3>{{data.teamOne}} <span>({{compare(data.scoreOne,data.scoreTwo)}})</span></h3>
+      <ul class="list-unstyled">
+        <li>Anja Landry (7)</li>
+        <li>Eadie Salinas (12)</li>
+        <li>Ashton Allen (10)</li>
+        <li>Baxter Metcalfe (5)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="team-2 w-50">
+    <div class="team-details w-100 text-center">
+      <img src="assets/images/logo_2.png" alt="Image" class="img-fluid">
+      <h3>{{data.teamTwo}} <span>({{compare(data.scoreTwo,data.scoreOne)}})</span></h3>
+      <ul class="list-unstyled">
+        <li>Macauly Green (3)</li>
+        <li>Arham Stark (8)</li>
+        <li>Stephan Murillo (9)</li>
+        <li>Ned Ritter (5)</li>
+      </ul>
+    </div>
+  </div>
+</div>
