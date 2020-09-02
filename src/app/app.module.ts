@@ -30,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DisplayPlayerComponent } from './components/display-player/display-player.component';
 import { DisplayUserComponent } from './components/display-user/display-user.component';
 import { ReversePipe } from './pipes/reverse.pipe';
+import { TrColorDirective } from './Directives/tr-color.directive';
 
 
 @NgModule({
@@ -58,6 +59,7 @@ import { ReversePipe } from './pipes/reverse.pipe';
     DisplayPlayerComponent,
     DisplayUserComponent,
     ReversePipe,
+    TrColorDirective,
     ],
   imports: [
     FormsModule,
