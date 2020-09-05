@@ -13,6 +13,8 @@ import { ScoresComponent } from './components/scores/scores.component';
 import { PlayersComponent } from './components/players/players.component';
 import { DisplayMatchComponent } from './components/display-match/display-match.component';
 import { DisplayPlayerComponent } from './components/display-player/display-player.component';
+import { DisplayUserComponent } from './components/display-user/display-user.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -27,7 +29,9 @@ const routes: Routes = [
   { path: 'scores', component: ScoresComponent},
   { path: 'players', component: PlayersComponent},
   { path: 'displayMatch/:id', component: DisplayMatchComponent},
-  { path: 'displayPlayer/:id', component: DisplayPlayerComponent}
+  { path: 'displayPlayer/:id', component: DisplayPlayerComponent},
+  { path: 'displayUser/:id', component: DisplayUserComponent},
+  { path: 'editUser/:id', component: EditUserComponent}
 ];
 
 @NgModule({

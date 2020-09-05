@@ -10,7 +10,7 @@ export class TrColorDirective {
   ) { }
 
   @HostListener('mouseenter') onMouseEnter(){
-    this.el.nativeElement.style.backgroundColor = 'green';
+    this.el.nativeElement.style.backgroundColor = 'white';
   }
   @HostListener('mouseleave') onMouseLeave(){
     this.el.nativeElement.style.backgroundColor = null; /* null for no color */
