@@ -71,7 +71,7 @@ import { EditUserComponent } from './edit-user/edit-user.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    InMemoryWebApiModule.forRoot(DataService)
+    // InMemoryWebApiModule.forRoot(DataService)
 
   ],
   providers: [],

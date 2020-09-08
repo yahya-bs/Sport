@@ -6,13 +6,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MatchService {
 
-  matchUrl = 'api/matches'
+  matchUrl = 'http://localhost:3000'
   constructor(
     private httpClient:HttpClient
   ) { }
 
   getAllMatches(){
-    return this.httpClient.get(this.matchUrl);
+    return this.httpClient.get<{message:string,matches:any}>(`${this.matchUrl}/matches`);
   }
   
   getMatchById(id:number){

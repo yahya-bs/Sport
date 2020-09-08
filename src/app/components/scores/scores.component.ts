@@ -17,7 +17,7 @@ export class ScoresComponent implements OnInit {
   ngOnInit() {
     this.matchService.getAllMatches().subscribe(
       data =>{
-        this.matches = data;
+        this.matches = data.matches;
       }
     )
   }
