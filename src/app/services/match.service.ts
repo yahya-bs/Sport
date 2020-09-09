@@ -24,11 +24,11 @@ export class MatchService {
   }
   
   addMatch(match:any){
-    return this.httpClient.post(this.matchUrl,match);
+    return this.httpClient.post<{message:string}>(`${this.matchUrl}/matches`,match);
   }
   
   editMatch(match:any){
-    return this.httpClient.put(`${this.matchUrl}/${match.id}`, match);
+    return this.httpClient.put<{message:string}>(`${this.matchUrl}/${match.id}`, match);
   }
 
 }

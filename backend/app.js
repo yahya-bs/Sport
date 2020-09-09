@@ -38,5 +38,11 @@ app.delete('/matches/:id',(req,res) => {
 });
 app.post('/matches',(req,res) => {
     console.log('Added Match');
+    res.status(200).json({
+        message:'Match added successfully'
+    });
 });
+app.put('matches/:id', (req,res) => {
+    console.log('Update Match By ID', req.params.id);
+})
 module.exports = app;
