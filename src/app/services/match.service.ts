@@ -20,7 +20,7 @@ export class MatchService {
   }
   
   deletetMatchById(id:number){
-    return this.httpClient.delete(`${this.matchUrl}/${id}`);
+    return this.httpClient.delete(`${this.matchUrl}/matches/${id}`);
   }
   
   addMatch(match:any){

@@ -30,4 +30,13 @@ app.get('/matches', (req, res) => {
         matches: matches
     })
 });
+app.get('/matches/:id',(req,res) => {
+    console.log('this is my id', req.params.id);
+});
+app.delete('/matches/:id',(req,res) => {
+    console.log('Deleted Match By ID', req.params.id);
+});
+app.post('/matches',(req,res) => {
+    console.log('Added Match');
+});
 module.exports = app;

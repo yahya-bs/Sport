@@ -1,3 +1,4 @@
+import { MatchService } from './../../services/match.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,14 +9,17 @@ import { Component, OnInit } from '@angular/core';
 export class AddMatchComponent implements OnInit {
 
   match:any={}
-  constructor() { }
+  constructor(private matchService:MatchService) { }
 
   ngOnInit(): void {
   }
 
   add(){
-    alert('done');
     console.log('match', this.match);
-    
+    this.matchService.addMatch(this.match).subscribe(
+      () => {
+        console.log('Service Called');
+      }
+    )
   }
 }
